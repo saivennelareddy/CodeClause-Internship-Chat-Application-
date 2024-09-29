@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,200;1,400&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Oswald:wght@200;300;400;500&family=Poppins:wght@100;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Rubik:ital,wght@0,300;1,300&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("Images/ques.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startBtn, .adminBtn, .homeBtn {
+    background-color: black;
+    font-size: 22px;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 2px solid green;
+    margin: 10px;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.startBtn:hover, .adminBtn:hover, .homeBtn:hover {
+    background-color: white;
+    color: green;
+}
+
+#mainDiv {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#mainBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#quiz, #panelInner {
+    width: 100%;
+    max-width: 800px;
+    background-color: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid pink;
+}
+
+#panelInner {
+    height: 100%;
+    grid-template-rows: 60px auto 60px;
+}
+
+#quizHeader, #header, #addBtnDiv {
+    height: 60px;
+    background-color: black;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 20px 20px 0 0;
+}
+
+#quizBody {
+    color: #f0f0f0;
+    padding: 20px;
+    background-color: #222;
+}
+
+#timer {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.option_group {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.option, .optionPanel {
+    background-color: black;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    color: white;
+    margin: 10px 0;
+    padding: 10px; /* Reduced size */
+    text-align: center;
+    width: 200px; /* Reduced width */
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.option:hover, .optionPanel:hover {
+    border: 2px solid green; /* Changed hover border to green */
+}
+
+.nxtBtn, .rstBtn {
+    background-color: red;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.nxtBtn:hover, .rstBtn:hover {
+    background-color: white;
+    color: red;
+}
+
+.active {
+    background-color: green; /* Changed active background to green */
+    border: 2px solid green; /* Changed active border to green */
+    color: white;
+    transition: 0.3s ease;
+}
+
+.exitBtn {
+    background-color: black;
+    color: white;
+    font-size: large;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+
+.exitBtn:hover {
+    background-color: white;
+    color: red;
+}
+
+#adminLogin {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#username, #password {
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.lbLogin {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.btnLogin {
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnLogin:hover {
+    background-color: red;
+    color: white;
+}
+
+#mainPanel {
+    width: 80%;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#questionsBody {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+#delAllBtn, #addBtn {
+    background-color: red;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.homeBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.homeBtn:hover {
+    background-color: white;
+    color: red;
+}
+
+.panelLi {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.liBtnAdd, .liBtnCancel, .liBtn {
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
